@@ -73,7 +73,7 @@ def run_system_monolith():
         
         x = 10
         if x > 5:
-            print("System Check OK")
+            pass # System Check OK
         else:
             print("System Failure")
             
