@@ -144,3 +144,36 @@ def count_officers(ranks):
             count += 1
     print(f"Total High-Ranking Officers: {count}")
     return count
+
+def main():
+
+    names, ranks, divs, ids = init_database()
+    user_name = input("Enter your Ensign Name: ")
+    
+    while True:
+        choice = display_menu(user_name)
+        
+        if choice == "1":
+            add_member(names, ranks, divs, ids)
+        elif choice == "2":
+            remove_member(names, ranks, divs, ids)
+        elif choice == "3":
+            update_rank(names, ranks, ids)
+        elif choice == "4":
+            display_roster(names, ranks, divs, ids)
+        elif choice == "5":
+            search_crew(names, ranks, divs, ids)
+        elif choice == "6":
+            filter_by_division(names, divs)
+        elif choice == "7":
+            calculate_payroll(ranks)
+        elif choice == "8":
+            count_officers(ranks)
+        elif choice == "9":
+            print("System shutting down. Live long and prosper.")
+            break
+        else:
+            print("Invalid option. Please try again.")
+
+if __name__ == "__main__":
+    main()
