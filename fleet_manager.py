@@ -97,3 +97,18 @@ def add_member(names, ranks, divs, ids):
             
     if not found:
         print("No matches found.")
+
+def filter_by_division(names, divs):
+    """Prints members in a specific division."""
+    print("\nFILTER BY DIVISION")
+    target_div = input("Enter Division to filter (e.g. Command, Operations): ")
+    
+    print(f"Members in {target_div}:")
+    count = 0
+    for i in range(len(names)):
+        if divs[i].lower() == target_div.lower():
+            print(f"- {names[i]}")
+            count += 1
+            
+    if count == 0:
+        print("No members found in this division.")
