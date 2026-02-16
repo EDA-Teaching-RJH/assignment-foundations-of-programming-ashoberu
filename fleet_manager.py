@@ -47,7 +47,7 @@ def add_member(names, ranks, divs, ids):
 
     def remove_member(names, ranks, divs, ids):
         """Removes a member by ID from all lists."""
-    print("\n--- REMOVE MEMBER ---")
+    print("\n REMOVE MEMBER")
     target_id = input("Enter ID to remove: ")
     
     if target_id in ids:
@@ -57,5 +57,19 @@ def add_member(names, ranks, divs, ids):
         divs.pop(idx)
         ids.pop(idx)
         print(f"Success: {removed_name} removed.")
+    else:
+        print("Error: ID not found.")
+    
+    def update_rank(names, ranks, ids):
+        """Updates the rank of a specific member."""
+    print("\nUPDATE RANK")
+    target_id = input("Enter ID to update: ")
+    
+    if target_id in ids:
+        idx = ids.index(target_id)
+        print(f"Current Rank for {names[idx]}: {ranks[idx]}")
+        new_rank = input("Enter new rank: ")
+        ranks[idx] = new_rank
+        print("Rank updated.")
     else:
         print("Error: ID not found.")
