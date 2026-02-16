@@ -44,3 +44,18 @@ def add_member(names, ranks, divs, ids):
     divs.append(new_div)
     ids.append(new_id)
     print(f"Success: {new_name} added.")
+
+    def remove_member(names, ranks, divs, ids):
+        """Removes a member by ID from all lists."""
+    print("\n--- REMOVE MEMBER ---")
+    target_id = input("Enter ID to remove: ")
+    
+    if target_id in ids:
+        idx = ids.index(target_id)
+        removed_name = names.pop(idx)
+        ranks.pop(idx)
+        divs.pop(idx)
+        ids.pop(idx)
+        print(f"Success: {removed_name} removed.")
+    else:
+        print("Error: ID not found.")
