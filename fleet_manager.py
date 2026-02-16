@@ -131,3 +131,16 @@ def calculate_payroll(ranks):
             total_cost += 200
         else:
             total_cost += 100
+            
+            print(f"Total Monthly Payroll: {total_cost} Credits")
+            return total_cost
+        
+def count_officers(ranks):
+    """Counts Captains and Commanders."""
+    print("\nOFFICER CENSUS")
+    count = 0
+    for rank in ranks:
+        if rank == "Captain" or rank == "Commander":
+            count += 1
+    print(f"Total High-Ranking Officers: {count}")
+    return count
