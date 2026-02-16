@@ -73,3 +73,12 @@ def add_member(names, ranks, divs, ids):
         print("Rank updated.")
     else:
         print("Error: ID not found.")
+
+    def display_roster(names, ranks, divs, ids):
+        """Prints a formatted table of all crew."""
+    print("\n CREW ROSTER")
+    print(f"{'ID':<6} {'Name':<20} {'Rank':<15} {'Division':<15}")
+    print("-" * 60)
+    
+    for i in range(len(names)):
+        print(f"{ids[i]:<6} {names[i]:<20} {ranks[i]:<15} {divs[i]:<15}")
