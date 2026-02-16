@@ -112,3 +112,22 @@ def filter_by_division(names, divs):
             
     if count == 0:
         print("No members found in this division.")
+
+def calculate_payroll(ranks):
+    """Calculates total payroll based on rank values."""
+    print("\nPAYROLL CALCULATION")
+    total_cost = 0
+    
+    for rank in ranks:
+        if rank == "Captain":
+            total_cost += 1000
+        elif rank == "Commander":
+            total_cost += 800
+        elif rank == "Lt. Commander":
+            total_cost += 600
+        elif rank == "Lieutenant":
+            total_cost += 500
+        elif rank == "Ensign":
+            total_cost += 200
+        else:
+            total_cost += 100
