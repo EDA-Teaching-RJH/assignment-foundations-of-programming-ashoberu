@@ -82,3 +82,18 @@ def add_member(names, ranks, divs, ids):
     
     for i in range(len(names)):
         print(f"{ids[i]:<6} {names[i]:<20} {ranks[i]:<15} {divs[i]:<15}")
+
+    def search_crew(names, ranks, divs, ids):
+        """Prints crew members whose name contains the search term."""
+    print("\nSEARCH CREW")
+    term = input("Enter name to search: ").lower()
+    found = False
+    
+    print(f"{'ID':<6} {'Name':<20} {'Rank':<15} {'Division':<15}")
+    for i in range(len(names)):
+        if term in names[i].lower():
+            print(f"{ids[i]:<6} {names[i]:<20} {ranks[i]:<15} {divs[i]:<15}")
+            found = True
+            
+    if not found:
+        print("No matches found.")
