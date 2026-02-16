@@ -30,3 +30,17 @@ def add_member(names, ranks, divs, ids):
         print("Error: ID already exists.")
         return
     
+    valid_ranks = ["Captain", "Commander", "Lt. Commander", "Lieutenant", "Ensign"]
+    new_rank = input(f"Enter Rank ({'/'.join(valid_ranks)}): ")
+    if new_rank not in valid_ranks:
+        print("Error: Invalid Rank.")
+        return
+
+    new_name = input("Enter Full Name: ")
+    new_div = input("Enter Division (Command/Operations/Sciences/Security): ")
+
+    names.append(new_name)
+    ranks.append(new_rank)
+    divs.append(new_div)
+    ids.append(new_id)
+    print(f"Success: {new_name} added.")
